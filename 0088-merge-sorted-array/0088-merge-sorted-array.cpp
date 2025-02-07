@@ -2,9 +2,9 @@ class Solution {
 public:
     void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
 
-    std::copy(nums2.begin(), nums2.end(), nums1.begin() + m);
-
-    std::sort(nums1.begin(), nums1.end());
+    nums1.resize(m); //remove extra zeros
+    nums1.insert(nums1.end(), nums2.begin(), nums2.end());
+    sort(nums1.begin(), nums1.end());
 
     
 
